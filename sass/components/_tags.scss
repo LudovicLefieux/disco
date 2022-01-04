@@ -1,0 +1,10 @@
+.tag {
+  border-radius: 50px;
+  padding: 8px 12px;
+  line-height: 1.5rem;
+
+  &--orange {
+    background: $transparent-yellow;
+    color: $interactive-orange;
+  }
+}

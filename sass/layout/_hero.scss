@@ -1,0 +1,42 @@
+.hero {
+  min-height: 500px;
+  height: 90vh;
+  margin-top: -80px;
+  background-color: $bg-green;
+  background-image: url(http://disco.local/wp-content/uploads/2021/12/hero.png);
+  background-size: 45vw;
+  background-repeat: no-repeat;
+  background-position: 43vw 50%;
+  align-items: center;
+  color: $white;
+  z-index: 0;
+
+  &__content-wrapper {
+    max-width: 500px;
+  }
+
+  &__title {
+    line-height: 64px;
+    margin-bottom: 40px;
+
+    span {
+      color: $yellow-span;
+    }
+  }
+
+  &__content {
+    max-width: 400px;
+    line-height: 26px;
+    margin-bottom: 5%;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+
+  &__small-text {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+  }
+}

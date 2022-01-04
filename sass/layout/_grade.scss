@@ -1,0 +1,14 @@
+.grade {
+  background: $grade-bg;
+  height: 10vh;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+
+  &__container {
+    justify-content: center;
+  }
+
+  img {
+    width: 35vw;
+    max-width: 40%;
+  }
+}

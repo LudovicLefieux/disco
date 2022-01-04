@@ -1,0 +1,43 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.375rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin-top: 32px;
+}
+
+.section {
+  padding: 0 24px 0 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+}

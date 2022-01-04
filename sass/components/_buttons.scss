@@ -1,0 +1,60 @@
+.button {
+  border: none;
+  border-radius: 5px;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &--black {
+    background: $black;
+
+    a {
+      color: $white;
+    }
+
+    &:hover,
+    &:hover a {
+      background: $yellow-span;
+      color: $black;
+    }
+  }
+
+  &--green {
+    background: $light-green;
+    border-radius: 8px;
+    font-size: inherit;
+
+    div {
+      font-family: "Inter", sans-serif;
+      color: $black;
+      font-weight: 400;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      i {
+        margin-left: 16px;
+        color: $grade-bg;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &--orange {
+    background: $white;
+    color: $interactive-orange;
+
+    &:hover,
+    &:hover a {
+      background: $interactive-orange;
+      color: $yellow-span;
+    }
+  }
+}

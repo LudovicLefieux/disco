@@ -1,0 +1,557 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Rubik:wght@300;400;600&display=swap");
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.375rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin-top: 32px;
+}
+
+.section {
+  padding: 0 24px 0 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+}
+.button a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.button--black {
+  background: #000;
+}
+.button--black a {
+  color: #fff;
+}
+.button--black:hover, .button--black:hover a {
+  background: #fdcc4f;
+  color: #000;
+}
+.button--green {
+  background: #d2eae5;
+  border-radius: 8px;
+  font-size: inherit;
+}
+.button--green div {
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-weight: 400;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.button--green div i {
+  margin-left: 16px;
+  color: #4a705c;
+  font-size: 2rem;
+}
+.button--orange {
+  background: #fff;
+  color: #ed712e;
+}
+.button--orange:hover, .button--orange:hover a {
+  background: #ed712e;
+  color: #fdcc4f;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.tab__heading {
+  display: flex;
+  align-items: center;
+}
+.tab__heading :first-child {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  margin-right: 16px;
+}
+.tab i {
+  transition: transform 1s ease;
+}
+.tab i.animated {
+  transform: rotateX(180deg);
+}
+
+.tag {
+  border-radius: 50px;
+  padding: 8px 12px;
+  line-height: 1.5rem;
+}
+.tag--orange {
+  background: rgba(253, 204, 79, 0.3);
+  color: #ed712e;
+}
+
+.header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 32px;
+  width: 100%;
+  background: #3d715b;
+  color: #fff;
+  min-height: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+.header__container {
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  max-height: 30px;
+  padding-right: 40px;
+}
+.header__menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.header__menu > li {
+  display: inline-block;
+}
+.header__menu > li a {
+  padding: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+.header__menu > li a:hover {
+  text-decoration: underline;
+}
+.header__menu--connexion {
+  justify-content: flex-end;
+}
+.header__menu--connexion :first-child a {
+  color: #fdcc4f;
+}
+
+.hero {
+  min-height: 500px;
+  height: 90vh;
+  margin-top: -80px;
+  background-color: #3d715b;
+  background-image: url(http://disco.local/wp-content/uploads/2021/12/hero.png);
+  background-size: 45vw;
+  background-repeat: no-repeat;
+  background-position: 43vw 50%;
+  align-items: center;
+  color: #fff;
+  z-index: 0;
+}
+.hero__content-wrapper {
+  max-width: 500px;
+}
+.hero__title {
+  line-height: 64px;
+  margin-bottom: 40px;
+}
+.hero__title span {
+  color: #fdcc4f;
+}
+.hero__content {
+  max-width: 400px;
+  line-height: 26px;
+  margin-bottom: 5%;
+}
+.hero button {
+  margin-bottom: 10px;
+}
+.hero__small-text {
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+.grade {
+  background: #4a705c;
+  height: 10vh;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.grade__container {
+  justify-content: center;
+}
+.grade img {
+  width: 35vw;
+  max-width: 40%;
+}
+
+.partners {
+  padding: 40px 0;
+}
+.partners__container {
+  justify-content: center;
+}
+.partners__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  justify-items: center;
+  width: 100%;
+}
+.partners__grid a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+.partners__grid a img {
+  max-height: 40px;
+  opacity: 0.3;
+}
+
+.how-it-works {
+  background: #f2f2f2;
+}
+.how-it-works__container {
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+.how-it-works__title {
+  padding: 88px 0;
+  font-size: 2.75rem;
+}
+.how-it-works__title span {
+  font-weight: 400;
+  color: #3d715b;
+}
+.how-it-works__step {
+  display: flex;
+  width: 100%;
+  margin-bottom: 120px;
+}
+.how-it-works__step__img-container {
+  width: 50%;
+}
+.how-it-works__step__img-container lottie-player {
+  width: 100%;
+}
+.how-it-works__step__content {
+  width: 50%;
+}
+.how-it-works__step__heading {
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  margin-bottom: 24px;
+}
+.how-it-works__step__text {
+  width: 75%;
+  font-size: 1.125rem;
+  color: #474747;
+  line-height: 1.625rem;
+  margin-bottom: 26px;
+}
+.how-it-works__step--right > div {
+  margin-left: 42px;
+}
+.how-it-works__step .browsers-list {
+  display: flex;
+}
+.how-it-works__step .browsers-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 40px;
+}
+.how-it-works__step .browsers-list__item img {
+  width: 40px;
+}
+.how-it-works__step .browsers-list__item span {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+
+.video-modal {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  cursor: pointer;
+  animation: fadeIn 0.4s ease;
+}
+.video-modal__container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.video-modal .close-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+.video-modal .video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.video-modal iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.guaranteed-discounts {
+  background: #fdcc4f;
+  padding: 160px 24px 80px 24px;
+}
+.guaranteed-discounts__container {
+  flex-direction: column;
+  align-items: center;
+}
+.guaranteed-discounts__content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.guaranteed-discounts__content__large {
+  max-width: 63%;
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 3.125rem;
+  margin-right: 50px;
+}
+.guaranteed-discounts__content__large span {
+  color: #ed712e;
+  font-weight: 400;
+}
+.guaranteed-discounts__content__small p {
+  font-size: 1.125rem;
+  color: #474747;
+  line-height: 1.625rem;
+  margin-bottom: 30px;
+}
+.guaranteed-discounts__img-container {
+  height: 340px;
+  width: 100%;
+  background: url(http://disco.local/wp-content/uploads/2021/12/guaranteed-discounts.png) no-repeat;
+  background-size: contain;
+}
+
+.invite-friend__container {
+  flex-direction: column;
+}
+.invite-friend__tab {
+  padding: 50px 0;
+}
+.invite-friend__tab:hover .tab__heading:first-child {
+  color: #ed712e;
+}
+.invite-friend__content {
+  display: none;
+}
+.invite-friend__img-container {
+  width: 40%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+}
+.invite-friend__img-container img {
+  width: 70%;
+}
+.invite-friend__text {
+  width: 50%;
+}
+.invite-friend__text p {
+  color: #474747;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  margin-bottom: 35px;
+}
+.invite-friend__text a {
+  color: #ed712e;
+  font-weight: 500;
+}
+
+.why {
+  padding: 130px 24px;
+  background: #f2f2f2;
+}
+.why__content {
+  width: 40%;
+  margin-right: 20px;
+}
+.why__title {
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+.why__text {
+  color: #474747;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  max-width: 85%;
+}
+.why__grid {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+.why__grid__item {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+}
+.why__grid__item img {
+  margin-right: 16px;
+}
+.why__grid__item p {
+  width: 45%;
+  line-height: 1.375rem;
+}
+.why__grid :last-child {
+  grid-column: span 2;
+}
+
+.footer {
+  padding: 40px 24px;
+  background-color: #f2f2f2;
+  background-image: url(http://disco.local/wp-content/uploads/2021/12/footer-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50vw 0;
+  border: solid 1px rgba(0, 0, 0, 0.05);
+}
+.footer__container {
+  flex-direction: column;
+}
+.footer .menu {
+  display: flex;
+  margin-bottom: 60px;
+}
+.footer .menu a {
+  color: #474747;
+}
+.footer .menu li + li:before {
+  padding: 8px;
+  color: #474747;
+  content: "/ ";
+}
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__feedbacks {
+  display: flex;
+  align-items: center;
+}
+.footer__feedbacks__img-container {
+  max-width: 110px;
+  margin-right: 70px;
+}
+.footer__feedbacks__img-container img {
+  width: 100%;
+}
+.footer__feedbacks__contact p:first-child {
+  color: #474747;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.footer__feedbacks__contact a {
+  color: #ed712e;
+  line-height: 1.375rem;
+}
+.footer__socials {
+  margin-right: 150px;
+}
+.footer__socials p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.footer__socials__list {
+  display: flex;
+}
+.footer__socials__list li {
+  margin-right: 28px;
+}
+.footer__socials__list li a {
+  font-size: 1.625rem;
+}
+.footer__copyright {
+  text-align: center;
+  color: #474747;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+}
+.footer__copyright a {
+  color: #ed712e;
+}
+
+/*# sourceMappingURL=style.css.map */

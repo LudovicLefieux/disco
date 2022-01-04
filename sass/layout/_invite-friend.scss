@@ -1,0 +1,44 @@
+.invite-friend {
+  &__container {
+    flex-direction: column;
+  }
+
+  &__tab {
+    padding: 50px 0;
+
+    &:hover .tab__heading:first-child {
+      color: $interactive-orange;
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__img-container {
+    width: 40%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 70%;
+    }
+  }
+
+  &__text {
+    width: 50%;
+
+    p {
+      color: $content;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+      margin-bottom: 35px;
+    }
+
+    a {
+      color: $interactive-orange;
+      font-weight: 500;
+    }
+  }
+}
