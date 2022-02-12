@@ -7,6 +7,7 @@
 @import "./components/buttons";
 @import "./components/tabs";
 @import "./components/tags";
+@import "./components/breadcrumbs";
 
 @import "./layout/header";
 @import "./layout/hero";
@@ -18,3 +19,5 @@
 @import "./layout/invite-friend";
 @import "./layout/why";
 @import "./layout/footer";
+
+@import "./pages/single";

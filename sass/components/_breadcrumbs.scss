@@ -1,0 +1,23 @@
+.breadcrumbs {
+  padding: 52px 24px 37px 24px;
+
+  &__list {
+    display: flex;
+
+    &__item {
+      a {
+        transition: all 0.2s ease;
+      }
+
+      a:hover {
+        color: $interactive-green;
+      }
+    }
+  }
+
+  li + li:before {
+    padding: 12px;
+    color: $content;
+    content: "\f054";
+  }
+}
